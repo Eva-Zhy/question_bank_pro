@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>答题管理系统</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/checkbox3.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/select2.min.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/themes/flat-blue.css">
+</head>
+
+<body class="flat-blue">
+<div class="app-container">
+    <div class="row content-container">
+        <!-- 顶部导航 -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-expand-toggle">
+                        <i class="fa fa-bars icon"></i>
+                    </button>
+                    <ol class="breadcrumb navbar-breadcrumb">
+                        <li class="active">答题管理系统</li>
+                    </ol>
+                    <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                        <i class="fa fa-th icon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- 侧边栏 -->
+        <div class="side-menu sidebar-inverse">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="side-menu-container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <div class="icon fa fa-paper-plane"></div>
+                            <div class="title">答题管理系统</div>
+                        </a>
+                        <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-times icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav">
+<!--                        <li class="active">-->
+<!--                            <a href="index.html">-->
+<!--                                <span class="icon fa fa-tachometer"></span><span class="title">首页</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+
+                        <li class="panel panel-default dropdown">
+                            <a data-toggle="collapse" href="#dropdown-table">
+                                <span class="icon fa fa-table"></span><span class="title">题库</span>
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-table" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li><a id="shijuan">试卷列表</a>
+                                        </li>
+                                        <li><a id="dati">选择题列表</a>
+                                        </li>
+                                        <li><a id="panduanti">判断提列表</a>
+                                        </li>
+                                        <li><a id="jiedati">解答题列表</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+<!--                        <li class="panel panel-default dropdown">-->
+<!--                            <a data-toggle="collapse" href="#dropdown-form">-->
+<!--                                <span class="icon fa fa-file-text-o"></span><span class="title">表单</span>-->
+<!--                            </a>-->
+<!--                            &lt;!&ndash; Dropdown level 1 &ndash;&gt;-->
+<!--                            <div id="dropdown-form" class="panel-collapse collapse">-->
+<!--                                <div class="panel-body">-->
+<!--                                    <ul class="nav navbar-nav">-->
+<!--                                        <li><a id="dati_form">提交答题</a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                    <ul class="nav navbar-nav">-->
+<!--                                        <li><a id="shijuan_form">提交试卷</a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/">免费网站模板</a></div>
+        <!-- Main Content -->
+        <div class="container-fluid" id="main_content">
+            <iframe src="table/shijuan_table.html" name="listReload" id="main_c" style="border: 0px; width: 100%;height: 100%; position: absolute;">
+            </iframe>
+        </div>
+    </div>
+</div>
+<!-- Javascript Libs -->
+<script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../lib/js/Chart.min.js"></script>
+<script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
+<script type="text/javascript" src="../lib/js/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" src="../lib/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../lib/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="../lib/js/select2.full.min.js"></script>
+<script type="text/javascript" src="../lib/js/ace/ace.js"></script>
+<script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
+<script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
+<!-- Javascript -->
+<script type="text/javascript" src="../js/app.js"></script>
+<!--<script type="text/javascript" src="../js/index.js"></script>-->
+
+<script>
+
+    $("#dati_form").click(function () {
+        $('#main_c').attr('src','form/dati_form.html');
+    });
+
+    $("#shijuan_form").click(function () {
+        $('#main_c').attr('src','form/shijuan_form.html');
+    });
+
+    $("#shijuan").click(function () {
+        $('#main_c').attr('src','table/shijuan_table.html');
+    });
+
+    $("#dati").click(function () {
+        $('#main_c').attr('src','table/dati_table.html');
+    });
+    $("#panduanti").click(function () {
+        $('#main_c').attr('src','table/panduanti_table.html');
+    });
+    $("#jiedati").click(function () {
+        $('#main_c').attr('src','table/jiedati_table.html');
+    });
+
+    function changeContent(url, obj) {
+        $("li.active").removeClass("active");
+        $("#" + obj).addClass("active");
+        $.ajax({
+            type: "get",
+            async: true,  //同步请求
+            url: url,
+            timeout: 60000, //请求超时时间，数据统计功能较为耗时，此处为兼容其设置
+            success: function (htmlData) {
+                $("#main_content").html(htmlData);
+            },
+            error: function (request) {
+                alert('操作失败，请稍候重试。' + request.status + ' - ' + url);
+            }
+        });
+    }
+</script>
+</body>
+
+</html>
